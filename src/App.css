@@ -1,7 +1,13 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
 .App{
     display: block;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(236, 246, 255);
 }
 
@@ -39,10 +45,122 @@
 .Search-input{
     font-size: 20px;
     padding: 10px;
+    width: 50%;
 }
 
 .Search-button{
     font-size: 18px;
+    font-weight: bold;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: rgb(96, 186, 238);
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 20px;
+    transition: all 0.2s;
+}
+
+.Search-button:hover{
+    background-color: #fff;
+    color: rgb(96, 186, 238);
+    border: 2px solid rgb(96, 186, 238);
+}
+
+@media (max-width: 900px) {
+    .Search-input{
+        width: auto;
+    }
+
+    .Search-button{
+        margin-left: 0;
+    }
+
+}
+
+
+/******************/
+/*Images*/
+/******************/
+.images-container{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 33%) 34%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-cell{
+    padding: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media (max-width: 900px) {
+    .images-container{
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .image-cell{
+        height: 200px;
+    }
+}
+
+
+/******************/
+/*Footer*/
+/******************/
+
+.footer{
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px;
+    background-color: rgb(15, 14, 20);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pexels-link{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.pexels-link:hover{
+    color: #ccc;
+    border: 2px solid #ccc;
+}
+
+.author{
+    color: #fff;
+}
+
+@media (max-width: 900px){
+    .footer{
+        flex-direction: column;
+    }
+
+    .pexels-link{
+        margin-bottom: 20px;
+    }
+    
+    .author{
+        margin-bottom: 10px;
+    }
 }

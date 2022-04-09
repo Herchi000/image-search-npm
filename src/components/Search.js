@@ -2,13 +2,16 @@ import { useState } from "react"
 
 const Search = (props) =>{
 
-    const [imageValue, setImageValue] = useState("")
+    //const [imageValue, setImageValue] = useState("")
 
-    const changeImgValue = e => setImageValue(e.target.value);
+    const changeImgValue = e => {
+        props.onValueChange(e.target.value);
+    }
 
-    const searchImage = (e) =>{
-        e.preventDefault()
-        props.onImagesChange(imageValue)
+
+    const searchImage = (e) => {
+        e.preventDefault();
+        props.onSearchImages(props.imageValue)
     }
 
     return(
@@ -18,7 +21,7 @@ const Search = (props) =>{
                 placeholder="Buscar imagen..."
                 className="Search-input"
                 id="Search-input"
-                value={imageValue}
+                value={props.imageValue}
                 onChange={changeImgValue}
             />
 

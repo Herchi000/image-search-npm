@@ -1,10 +1,11 @@
 
-const Images = () => {
+const Images = ({urlImage}) => {
 
     
     return(
-        <div id="images">
+        <div className="image-cell">
 
+            <img src={urlImage} alt='image' className="image"/>
         </div>
     )
 
