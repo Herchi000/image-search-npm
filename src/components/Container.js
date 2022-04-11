@@ -20,7 +20,7 @@ const Container = () => {
         axios.defaults.headers.common['Authorization'] = apiKey;
         await axios(`https://api.pexels.com/v1/search?query=${value}&per_page=18`)
         .then(arrayData => {
-            console.log(arrayData)
+            
             setImages(arrayData.data.photos)
         })
     }
@@ -38,8 +38,8 @@ const Container = () => {
             />
             
             <div className="images-container">
-                {images.map((value, index) => {
-                    return <Images key={index} urlImage={value.src.large}/>
+                {images.map((photo, index) => {
+                    return <Images key={index} urlImage={photo.src.large} urlImageLarge={photo.src.large2x}/>
                 })}
             </div>
             

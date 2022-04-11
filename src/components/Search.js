@@ -1,8 +1,5 @@
-import { useState } from "react"
 
 const Search = (props) =>{
-
-    //const [imageValue, setImageValue] = useState("")
 
     const changeImgValue = e => {
         props.onValueChange(e.target.value);

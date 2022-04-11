@@ -4,6 +4,7 @@
     margin: 0;
 }
 
+
 .App{
     display: block;
     width: 100%;
@@ -102,7 +103,9 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
+
 
 
 @media (max-width: 900px) {
@@ -114,6 +117,54 @@
         height: 200px;
     }
 }
+
+/******************/
+/*Image Frame*/
+/******************/
+.image-frame{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.7);
+    z-index: 1;
+}
+
+.close{
+    display: block;
+    position: fixed;
+    right: 0%;
+    width: 50px;
+    height: 50px;
+    background-color: #111;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 100%;
+    margin: 40px 40px ;
+    cursor: pointer;
+}
+
+.image-box{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-large{
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    border: 2px solid #ccc; 
+}
+
+
+
 
 
 /******************/
@@ -164,3 +215,5 @@
         margin-bottom: 10px;
     }
 }
+
+
